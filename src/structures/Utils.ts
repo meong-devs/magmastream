@@ -98,8 +98,9 @@ export abstract class TrackUtils {
 				requester,
 				pluginInfo: {
 					albumName: data.pluginInfo?.albumName,
-					artistArtworkUrl: data.pluginInfo?.artistArtworkUrl,
 					albumUrl: data.pluginInfo?.albumUrl,
+					artistArtworkUrl: data.pluginInfo?.artistArtworkUrl,
+					artistUrl: data.pluginInfo?.artistUrl,
 					previewUrl: data.pluginInfo?.previewUrl,
 					isPreview: data.pluginInfo?.isPreview
 				}

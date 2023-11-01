@@ -511,6 +511,7 @@ export interface Track {
 export interface TrackPluginInfo {
 	albumName?: string;
 	artistArtworkUrl?: string;
+	artistUrl?: string;
 	albumUrl?: string;
 	previewUrl?: string;
 	isPreview?: string;
