@@ -1,5 +1,6 @@
 {
 	"name": "@drgatoxd/magmastream",
+	"private": false,
 	"version": "2.2.3",
 	"description": "A user-friendly Lavalink client designed for NodeJS (customized for Meong).",
 	"main": "dist/index.js",
