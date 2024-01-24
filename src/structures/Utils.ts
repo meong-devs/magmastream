@@ -101,8 +101,8 @@ export abstract class TrackUtils {
 					albumUrl: data.pluginInfo?.albumUrl,
 					artistArtworkUrl: data.pluginInfo?.artistArtworkUrl,
 					artistUrl: data.pluginInfo?.artistUrl,
-					previewUrl: data.pluginInfo?.previewUrl,
-					isPreview: data.pluginInfo?.isPreview
+					isPreview: data.pluginInfo?.isPreview,
+					previewUrl: data.pluginInfo?.previewUrl
 				}
 			};
 
@@ -269,7 +269,7 @@ export interface TrackData {
 	encoded: string;
 	/** The detailed information of the track. */
 	info: TrackDataInfo;
-	/** Addition track info provided by plugins. */
+	/** Additional track info provided by plugins. */
 	pluginInfo: Record<string, string>;
 }
 

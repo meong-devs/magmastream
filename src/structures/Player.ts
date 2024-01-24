@@ -94,7 +94,7 @@ export class Player {
 		if (options.textChannel) this.textChannel = options.textChannel;
 
 		const node = this.manager.nodes.get(options.node);
-		this.node = node || this.manager.leastLoadNodes.first();
+		this.node = node || this.manager.leastPlayersNodes.first();
 
 		if (!this.node) throw new RangeError('No available nodes.');
 
@@ -233,7 +233,7 @@ export class Player {
 			? playOptions
 			: ['startTime', 'endTime', 'noReplace'].every(v =>
 					Object.keys(optionsOrTrack || {}).includes(v)
-        )
+			  )
 			? (optionsOrTrack as PlayOptions)
 			: {};
 
@@ -504,17 +504,17 @@ export interface Track {
 	readonly requester: unknown | null;
 	/** Displays the track thumbnail with optional size or null if it's a unsupported source. */
 	displayThumbnail(size?: Sizes): string;
-	/** Metadata added by LavaSrc */
+	/** Additional track info provided by plugins. */
 	pluginInfo: TrackPluginInfo;
 }
 
 export interface TrackPluginInfo {
 	albumName?: string;
+	albumUrl?: string;
 	artistArtworkUrl?: string;
 	artistUrl?: string;
-	albumUrl?: string;
-	previewUrl?: string;
 	isPreview?: string;
+	previewUrl?: string;
 }
 
 /** Unresolved tracks can't be played normally, they will resolve before playing into a Track. */
